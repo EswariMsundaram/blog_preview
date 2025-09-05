@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="sample_logo.jpg" alt="Company logo"/>
+        <nav role="navigation">
+            <ul class="nav_flex">
+                    <li><a class="nav" id="homeLink" href="#home">Home</a></li>
+                    <li><a class="nav" href="#About_us_column">About us</a></li>
+                    <li><a class="nav" href="#Services_column">Services</a></li>
+                    <li><a class="nav" href="#Contact_column">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <hero class="hero">
+            <h1>Welcome to Accessible Design Co.. </h1>
+            <section class="hero_sec">
+                <h2>Your Vision, Our Creation</h2>
+                <p><em>Turning ideas into beautifully designed, user-friendly websites...</em></p>
+                 <a href="#signup" class="signup-btn">Sign Up</a>
+            </section>
+        </hero>
+        <section>
+            <!--About US-->
+            <div id="About_us_column">
+                <article>
+                    <h3>About Us</h3>
+                    <p class="style"> Welcome to Accessible Design Co., where creativity and technology come together.
+                        We are a passionate team dedicated to building modern, user-friendly digital experiences that make an impact. 
+                        Our mission is to help businesses and individuals grow by delivering reliable, innovative, and high-quality solutions.
+                        With a strong focus on innovation, transparency, and customer satisfaction, we believe in turning ideas into reality. 
+                        Whether you are a small business taking your first step online or an established brand looking to expand, 
+                        we are here to support your journey
+                    </p>
+                </article>
+            </div>
+        </section>
+            <div class="grid_container">
+                <!--Service Section-->
+                <div id="Services_column">
+                    <article>
+                        <div class="services"><h3>Our Services</h3></div>
+                        <div class="design">
+                            <h4>Web Design</h4>
+                            <img src="design.png" width="300px" height="200px">
+                            <p class="style">We create beautiful, responsive, and accessible designs that bring your brand to life.</p>
+                        </div>
+                        <div class="develop">
+                            <h4>Web Development</h4>
+                            <img src="develop.png" width="300px" height="200px">
+                            <p class="style">From simple websites to advanced platforms, we build fast, secure, and scalable solutions.</p>
+                        </div>
+                        <div class="ui_ux">
+                            <h4>UI/UX Design</h4>
+                            <img src="ux.png" width="300px" height="200px">
+                            <p class="style">We design seamless and engaging user experiences that connect you with your audience.</p>
+                        </div>
+                        <div class="seo">
+                            <h4>SEO Optimization</h4>
+                            <img src="seo.jpeg" width="300px" height="200px">
+                            <p class="style">We help you rank higher on search engines with strategies that boost your online visibility.</p>
+                        </div>
+                    </article>
+                </div>
+                <!--Contact Form-->
+                <div id="Contact_column">
+                    <h3>Contact Form</h3>
+                    <form class="contact_form">
+                        <label for="name">Name</label><br>
+                        <input type="text" id="name" name="name" placeholder="Charlie Manroe"><br>
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email" name="email" aria-describedby="emailHelp" placeholder="example@hotmail.com" size="30"><br>
+                        <small id="emailHelp">! We'll never share your email with anyone else.</small><br>
+                        <label for="subject">Subject</label><br>
+                        <input type="text" id="subject" name="subject" placeholder="Sample subject"><br>
+                        <label for="userMessage">Message</label><br>
+                        <textarea id="userMessage" name="messageContent" rows="5" cols="40" placeholder="Enter your message here..."></textarea><br>
+                        <button class="contact-submit-button" id="submitButton" type="button" onclick="sendMessage()"  aria-live="polite">Submit</button>
+                        <img class="home" src="home.png" aria-label="Back to home" tabindex="0" onclick="homePage()" width="30px" height="30px">
+                    </form>
+                </div>
+            </div>
+               
+    </main>
+    <script>
+        function sendMessage() 
+            {
+                const button = document.getElementById('submitButton');
+                const label=button.innerHTML="Your form Submitted Successfully!!";
+                console.log(label);
+            }
+        function homePage()
+        {
+             document.getElementById('homeLink').focus();
+        }
+    </script>
+    <footer>
+         <span class="footer">
+            <p>&copy; 2025 Accessible Design Co.
+            <a href="#Contact_column">Contact</a>
+            <a href="https://www.linkedin.com/">LinkedIn</a></p>
+         </span>
+    </footer>
+</body>
+</html>
