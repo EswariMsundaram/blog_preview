@@ -108,7 +108,7 @@ body
     padding: 20px;
     align-content: center;
     display: grid;
-    grid-template-columns: 1fr 1fr;  /* 2 equal columns */
+    grid-template-columns: 1fr 1fr; 
     grid-template-rows: auto auto auto;
     gap:20px;
     
@@ -162,6 +162,9 @@ font-weight: bold;
 .footer {
     text-align: center;
     color:white;
+}
+.footer a{
+    color:lightblue;
 }
 .nav:hover{
     border:5px solid #B8722D;
