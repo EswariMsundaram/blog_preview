@@ -23,11 +23,18 @@
                     <label for="email">Email</label>
                     <input class="contact-input" id="email" type="text" placeholder="da.real.harry@gmail.com" />
                     <label for="message">Message</label>
-                    <textarea class="contact-textarea" id="message" rows="4" cols="50" placeholder="Your message..."></textarea>
-                    <button class="contact-submit-button" type="button" onclick="submitForm()">Send message</button>
+                    <textarea class="contact-textarea" id="message" rows="5" cols="50" aria-describedby="max-words" placeholder="Your message..."></textarea><br>
+                    <small id="max-words">Maximum 250 characters only!</small><br>
+                    <button class="contact-submit-button" type="button" id="submitButton" aria-live="polite" onclick="submit_form()">Submit message</button>
                 </form>
                 <img class="contact-image" src="connect.jpg" alt="A robot hand and a human reaching for each other." />
             </div>
+            <script>
+                function submit_form(){
+                        document.getElementById('submitButton').textContent='Message sent ✅';
+                }
+                
+            </script>
         </main>
     </body>
 </html>
