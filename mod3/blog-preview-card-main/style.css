@@ -35,6 +35,11 @@ button{
     border: none;
     padding:5px;
 }
+button:hover{
+    background-color: rgb(224, 233, 139);
+    font-size: medium;
+    padding:7px;
+}
 .blog{
     padding:20px;
 }
